@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body  data-aos="zoom-in">
+    <section class="social-content">
+        <a href=""><ion-icon class="lon" name="logo-facebook"></ion-icon></a>
+        <a href="https://twitter.com/eyasuCc"><ion-icon class="lon" name="logo-twitter"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/josh-jan-402a02252/"><ion-icon class="lon" name="logo-linkedin"></ion-icon></a>
+        <a href=""><ion-icon class="lon" name="logo-github"></ion-icon></a>
+        <a href="https://www.reddit.com/user/EyasuC"><ion-icon class="lon" name="logo-reddit"></ion-icon></a>
+    </section>
+    <section id="contact-form-section">
+        <div class="contact-form-page">
+          <form id="contact-form" action="">
+            <div class="inputN nameF">
+                <input type="text" placeholder="" name="from_name" id="from_name" required>
+                <span>what is your : Name</span>
+            </div>
+            <div class="inputN nameE">
+                <input type="email" placeholder="" name="email_id" id="email_id" required>
+                <span>what is your : Email</span>
+            </div>
+            <div class="inputT nameP">
+                <textarea name="message" placeholder="" id="" ></textarea>
+                <span>what is on your mind ?</span>
+            </div>
+            <input style="
+              width:10rem;
+              height: 3em;
+              border-radius: 25px;
+              border: none;
+              color: #fff;
+              cursor: pointer;
+              background-color: #009999;
+            " type="submit" id="contact-button" value="Send Email" >
+            <!-- <button type="submit" id="contact-button">Publish</button> -->
+        </form>
+        </div>
+      </section>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+      <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script>
+        emailjs.init('PReOi9BEaoiSJfmkS')
+
+        const btn = document.getElementById('contact-button');
+
+        document.getElementById('contact-form')
+        .addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'default_service';
+            const templateID = 'template_9x9vue7';
+
+            emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Thank you for your feedback i will respond to you as soon as possible !');
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+        });
+
+        // AOS init
+        function aos_init() {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        }
+        window.addEventListener('load', () => {
+            aos_init();
+        });
+      </script>
+</body>
+</html>

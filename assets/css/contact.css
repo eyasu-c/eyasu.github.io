@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+html{
+    font-family: 'Space Mono', monospace;
+}
+body{
+    overflow: hidden;
+}
+
+.social-content{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    max-width: 50%;
+    
+}
+ion-icon{
+    font-size: 25px;
+    background-color: #009999;
+    fill: #fff;
+    padding: 10px;
+    border-radius: 50%;
+}
+ion-icon:hover{
+    transform: scale(1.2);
+
+}
+
+.contact-form-page{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    padding: 20px;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.inputN{
+    position: relative;
+    width: 60vw;
+    display: flex;
+    margin: 30px;
+    border-radius: 5px;
+}
+.inputN input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    color: #009999;
+    border: 1px solid #009999;
+    font-size: 1.3em;
+    height: 2rem;
+    align-items: center;
+}
+.inputN span{
+    position: absolute;
+    left: 0;
+    font-size: 0.9em;
+    padding: 10px;
+    pointer-events: none;
+    color: #009999;
+    text-transform: uppercase;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+form button{
+    width:10rem;
+    height: 3em;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    margin-left: 30px;
+    cursor: pointer;
+    background-color: #009999;
+}
+.inputN input:valid ~ span,
+.inputN input:focus ~ span{
+    color: #0099ff;
+    transform: translateX(10px) translateY(-10px);
+    padding: 0 15px;
+    font-size: 0.95em;
+    background: rgb(255, 255, 255);
+    border-left:  1px solid #0099ff;
+    border-right: 1px solid #0099ff;
+    letter-spacing: 0.1em;
+}
+.inputN input:valid,
+.inputN input:focus{
+    border: 1px solid #0099ff;
+}
+
+
+/* ////////////// testarea ///////////// */
+.inputT{
+    position: relative;
+    width: 60vw;
+    display: flex;
+    margin: 30px;
+    border-radius: 5px;
+}
+.inputT textarea{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    resize: none;
+    height: 40vh;
+    border-radius: 5px;
+    color: #009999;
+    border: 1px solid #009999;
+    font-size: 1.6em;
+}
+.inputT span{
+    position: absolute;
+    left: 0;
+    font-size: 0.9em;
+    pointer-events: none;
+    color: #009999;
+    text-transform: uppercase;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+form button{
+    width:10rem;
+    height: 3em;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #009999;
+}
+.inputT textarea:valid ~ span,
+.inputT textarea:focus ~ span{
+    color: #0099ff;
+    transform: translateX(10px) translateY(-10px);
+    padding: 0 15px;
+    font-size: 0.95em;
+    background: #ffffff;
+    border-left:  1px solid #0099ff;
+    border-right: 1px solid #0099ff;
+    letter-spacing: 0.2em;
+}
+.inputT textarea:valid,
+.inputT textarea:focus{
+    border: 1px solid #0099ff;
+}
+@media (max-width: 650px){
+    .inputT, .inputN{
+        width: 20em;
+    }
+}
