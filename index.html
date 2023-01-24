@@ -14,12 +14,12 @@
     <link rel="preload" href="assets/css/index.css" as="style">
     <link rel="preload" href="assets/js/index.js" as="script">
     <link rel="preload" href="assets/js/progress.js" as="script">
-    <link rel="preload" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" />
+    <link rel="preload" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" as="style" />
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body style="background-color: rgb(10, 17, 22);">
+<body style="background-color: rgb(13, 22, 29);">
     <div class="preloader" id="preloader" style="background: rgb(255, 255, 255) url(assets/image/preloader1.gif) no-repeat center center;
     background-size: 30%;"></div>
     <span class="ul-line"></span>
@@ -44,14 +44,16 @@
     </header>
     <div id="mobileMenu" class="mobile-menu-list">
         <svg onclick="hideMenu()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);"><path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path></svg>
-        <ul>
-            <li><a class="active-nav" href="#home">home</a></li>
-            <li><a href="#about">about</a></li>
-            <!-- <li><a href="#services">services</a></li> -->
-            <li><a href="#project">works</a></li>
-            <li><a href="#skill">skill</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+        <div class="_container">    
+        <div class="links">
+                <a class="link" class="active-nav" href="#home">home</a>
+            <a class="link" href="#about">about</a>
+            <!-- <a href="#services">services</a> -->
+            <a class="link" href="#project">works</a>
+            <a class="link" href="#skill">skill</a>
+            <a class="link" href="#contact">contact</a>
+            </div>
+            </div>
     </div>
     <main id="home">
         <div class="main-container">
@@ -64,10 +66,7 @@
                     <h2 id="typing"></h2>
                 </div>
                 <div class="scroll-ind">
-                    <div class="video">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(255, 0, 0);"><path d="M7 6v12l10-6z"></path></svg></span>
-                        <span>Play Video</span>
-                    </div>
+                    
                     <div class="icon-absolute">
                         <hr>
                         <a href=""><ion-icon class="lon" name="logo-facebook"></ion-icon></a>
@@ -110,7 +109,7 @@
                     </span>
                     <span>
                         <li>Birth Date :</li>
-                        <li>25 aug 1995</li>
+                        <li>25 aug 2000</li>
                     </span>
                     <span>
                         <li>Location :</li>
@@ -132,25 +131,25 @@
             <p>Here is my skills to represent my Expertise</p>
         </div>
         <div id="skillsSection" class="skill-main">
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>HTML</p>
-                    <p>90%</p>
+                    <p>100%</p>
                 </div>
                 <div class="bar">
                     <span class="html"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>CSS</p>
-                    <p>90%</p>
+                    <p>100%</p>
                 </div>
                 <div class="bar">
                     <span class="css"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>Java Script</p>
                     <p>80%</p>
@@ -159,7 +158,7 @@
                     <span class="js"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>MongoDb</p>
                     <p>50%</p>
@@ -168,7 +167,7 @@
                     <span class="mongo"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>Django</p>
                     <p>70%</p>
@@ -177,16 +176,16 @@
                     <span class="django"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>React Js</p>
-                    <p>50%</p>
+                    <p>60%</p>
                 </div>
                 <div class="bar">
                     <span class="react"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>Node Js</p>
                     <p>50%</p>
@@ -195,10 +194,10 @@
                     <span class="node"></span>
                 </div>
             </div>
-            <div class="skill-bar">
+            <div class="skill-bars">
                 <div class="skill-info">
                     <p>Python</p>
-                    <p>60%</p>
+                    <p>70%</p>
                 </div>
                 <div class="bar">
                     <span class="python"></span>
@@ -403,12 +402,12 @@
                     </div>
                 </a>
                 <a href="mailto:hsojyt@gmail.com"></a>
-                <!-- <a href="">
+                <a href="https://twitter.com/eyasuCc">
                     <div class="cont-c twitter">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #fff"><path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path></svg>
                         <span>On twitter</span>
                     </div>
-                </a> -->
+                </a>
                 <a data-aos="fade-up"
      data-aos-anchor-placement="bottom-bottom" href="tel:+903202058">
                     <div class="cont-c phone">
